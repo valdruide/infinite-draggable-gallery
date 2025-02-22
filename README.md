@@ -41,8 +41,8 @@ Edit the variables in `main.js`
 | `imgWidth`       | `int`                | **Required**. Image width                                      |
 | `imgHeight`      | `int`                | **Required**. Image height                                     |
 | `imgURLArray`    | `array`              | Images array                                                   |
-| `rowNum`         | `int`                | **Required**. Rows number                                      |
-| `imgNum`         | `int`                | **Required**. Images number per row                            |
+| `rowNum`         | `int`                | **Required**. Number of rows                                   |
+| `imgNum`         | `int`                | **Required**. Number of images per row                         |
 | `gutter`         | innerWidth + `float` | **Required**. Space between elements                           |
 | `edgeResistance` | `float`              | **Required**. Resistance at the edge of the grid               |
 | `dragResistance` | `float`              | **Required**. Adjust drag speed                                |
