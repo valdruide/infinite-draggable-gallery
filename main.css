@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+:root {
+    --gap: 50px;
+    --scrollSpeed: 0.8s;
+}
+body {
+    background-color: #0d0d18;
+    position: relative;
+    height: 100vh;
+}
+p {
+    margin: 0;
+}
+.sliderImage {
+    transition: background-size 0.3s ease;
+    border-radius: 10px;
+}
+.bar {
+    background-color: #17f700;
+    position: absolute;
+    transition: all 0.7s ease-out;
+    overflow: hidden;
+    display: flex;
+    gap: var(--gap);
+}
+.verticalBar {
+    width: 50px;
+    height: 100vh;
+}
+.horizontalBar {
+    width: 100vw;
+    height: 50px;
+}
+.topBar {
+    top: -70px;
+    left: 0;
+    z-index: 10;
+}
+.rightBar {
+    top: 0;
+    right: -70px;
+    z-index: 20;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bottomBar {
+    bottom: -70px;
+    left: 0;
+    z-index: 30;
+    justify-content: flex-end;
+}
+.leftBar {
+    top: 0;
+    left: -70px;
+    z-index: 40;
+    flex-direction: column;
+}
+.bar p {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #000000;
+    font-family: 'Martian Mono', serif;
+    font-weight: 800;
+}
+.bar div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bar img {
+    width: 45px;
+}
+/* --------------------------------- TOP BAR -------------------------------- */
+.topBar img {
+    transform: rotate(180deg);
+}
+.topBar div {
+    animation: scrollLeft var(--scrollSpeed) linear infinite;
+}
+/* -------------------------------- RIGHT BAR ------------------------------- */
+.rightBar img {
+    transform: rotate(90deg);
+}
+.rightBar div {
+    flex-direction: column;
+    animation: scrollDown var(--scrollSpeed) linear infinite;
+}
+.rightBar p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+/* ------------------------------- BOTTOM BAR ------------------------------- */
+.bottomBar div {
+    animation: scrollRight var(--scrollSpeed) linear infinite;
+}
+/* -------------------------------- LEFT BAR -------------------------------- */
+.leftBar img {
+    transform: rotate(-90deg);
+}
+.leftBar div {
+    flex-direction: column;
+    animation: scrollUp var(--scrollSpeed) linear infinite;
+}
+.leftBar p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+@keyframes scrollLeft {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+@keyframes scrollRight {
+    to {
+        transform: translateX(calc(100% + var(--gap)));
+    }
+}
+@keyframes scrollDown {
+    to {
+        transform: translateY(calc(100% + var(--gap)));
+    }
+}
+@keyframes scrollUp {
+    to {
+        transform: translateY(calc(-100% - var(--gap)));
+    }
+}
