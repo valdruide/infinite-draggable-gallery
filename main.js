@@ -259,7 +259,7 @@ function setStyles() {
 }
 
 function applyInertia(vx, vy) {
-    let friction = 0.9; // Réduction progressive de la vitesse (ajuster entre 0.9 et 0.99)
+    let friction = 0.9; // Gradual speed reduction (adjust between 0.9 and 0.99)
 
     function animateInertia() {
         vx *= friction;
@@ -273,7 +273,7 @@ function applyInertia(vx, vy) {
             onUpdate: updateCenterElem,
             onComplete: function () {
                 if (Math.abs(vx) > 0.5 || Math.abs(vy) > 0.5) {
-                    animateInertia(); // Continue tant que la vitesse est significative
+                    animateInertia(); // Continue as long as the speed is significant
                 }
             },
         });
@@ -292,11 +292,11 @@ function createDraggable() {
     return Draggable.create(containerSelector, {
         trigger: '.mask',
         type: 'x,y',
-        edgeResistance: 0.65, // Résistance sur les bords
+        edgeResistance: 0.65,
         dragResistance: 0.2,
         resistance: 400,
         onDragStart: function () {
-            gsap.killTweensOf(containerSelector); // Stoppe l'inertie actuelle s'il y en a une
+            gsap.killTweensOf(containerSelector); // Stops the current inertia if there is one
             lastX = this.x;
             lastY = this.y;
         },
