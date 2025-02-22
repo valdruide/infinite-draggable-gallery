@@ -83,6 +83,10 @@ Please make sure to update tests as appropriate.
 
 ## Screenshots
 
+#### **Without dragging :**
+
 ![App Screenshot](https://i.imgur.com/W2gJwZX.png)
+
+#### **When dragging :**
 
 ![App Screenshot](https://i.imgur.com/DHPNAyx.png)
