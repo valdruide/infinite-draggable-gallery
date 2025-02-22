@@ -260,8 +260,6 @@ function setStyles() {
 
 function applyInertia(vx, vy) {
     let friction = 0.9; // Réduction progressive de la vitesse (ajuster entre 0.9 et 0.99)
-    let duration = Math.max(Math.abs(vx), Math.abs(vy)) / 50; // Durée ajustée selon la vitesse
-    duration = Math.min(duration, 2); // Empêche une inertie trop longue
 
     function animateInertia() {
         vx *= friction;
