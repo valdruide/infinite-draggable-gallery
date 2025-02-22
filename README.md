@@ -26,6 +26,7 @@ SOON...
 ## Features
 
 -   Multi-directional drag and drop
+-   Inertia
 -   Responsive
 -   Visual First
 -   Customizable
